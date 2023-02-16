@@ -4,8 +4,6 @@ import styled from "styled-components";
 
 export const ProductSliderrStyled = styled.div`
 
-border: 1px solid red;
-
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -15,14 +13,13 @@ gap: 20px;
 .FL-productSlider-selected{
 	width: 450px;
 	height: 450px;
-	object-fit: contain;
+	object-fit: cover;
 	margin: 0 auto;
 	border: 1px solid green;
 }
 
 .mySwiper{
 	width: 80%;
-	border: 1px solid green;
 }
 
 

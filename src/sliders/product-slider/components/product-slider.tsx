@@ -8,6 +8,9 @@ import { productSubImgs } from '../product-slider.constants';
 import { Swiper as SwiperType } from 'swiper';
 
 export const ProductSlider = () => {
+  const arr = Array.from(Array(10).keys());
+  console.log(arr);
+
   const ref = useRef<SwiperType | null>(null);
   const [selected, setSelected] = useState<string>(
     'https://makeupandbeauty.com/wp-content/uploads/2015/06/Some-Jewelry-Mistakes-you-are-Probably-Making-1.jpg',
@@ -37,9 +40,9 @@ export const ProductSlider = () => {
           ref.current = swiper;
           console.log(swiper);
         }}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         modules={[FreeMode, Pagination]}
         className='mySwiper'
       >

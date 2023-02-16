@@ -8,13 +8,13 @@ import './app.scss';
 import { HomePage } from './pages/home/home';
 import { pagesConfig } from './pages/pages.config';
 import { ProductDetailsPage } from './pages/product-details/product-deatils';
+import { SalePage } from './pages/sale-page/sale-page';
 import { PublicRouteGuard } from './pages/_gurads/public-route-guard';
 import './theme/global.css';
 import { GlobalStyles } from './theme/global.styled';
 import { theme } from './theme/theme';
 
 export const App = () => {
-  console.log('asdfdsf');
   return (
     <div className='app'>
       <ThemeProvider theme={theme}>
@@ -37,6 +37,14 @@ export const App = () => {
                 element={
                   <PublicRouteGuard>
                     <ProductDetailsPage />
+                  </PublicRouteGuard>
+                }
+              />
+              <Route
+                path={pagesConfig.salePage.path}
+                element={
+                  <PublicRouteGuard>
+                    <SalePage />
                   </PublicRouteGuard>
                 }
               />
